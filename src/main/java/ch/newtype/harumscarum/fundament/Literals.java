@@ -2,6 +2,10 @@ package ch.newtype.harumscarum.fundament;
 import ch.newtype.harumscarum.fundament.enums.Gender;
 import ch.newtype.harumscarum.util.Randomizer;
 
+/**
+ *
+ * @author Truemmelbach
+ */
 public class Literals {
 	
 	private final static String[] LASTNAMES = {"Ackley", "Adams", "Ahern", "Allen", 
