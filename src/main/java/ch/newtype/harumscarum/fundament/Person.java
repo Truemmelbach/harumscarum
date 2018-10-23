@@ -8,6 +8,9 @@ import ch.newtype.harumscarum.fundament.enums.Genre;
 import ch.newtype.harumscarum.fundament.enums.Intelligence;
 import ch.newtype.harumscarum.fundament.enums.Mood;
 
+/**
+ * @author Truemmelbach
+ */
 public class Person {
 	
 	// --- unveränderliche Attribute ---
