@@ -12,6 +12,12 @@ import java.util.Set;
 
 import ch.newtype.harumscarum.util.Randomizer;
 
+/**
+ * Verschiedene Videospiel-Genres.
+ * Jedes Genre kann beliebig viele Subgenres haben.
+ *
+ * @author Truemmelbach
+ */
 public enum Genre {
 
 	ACTION("Action"), 

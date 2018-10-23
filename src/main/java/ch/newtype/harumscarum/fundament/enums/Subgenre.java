@@ -1,5 +1,8 @@
 package ch.newtype.harumscarum.fundament.enums;
 
+/**
+ * @author Truemmelbach
+ */
 public enum Subgenre {
 	
 	EGO_SHOOTER("Ego Shooter"),

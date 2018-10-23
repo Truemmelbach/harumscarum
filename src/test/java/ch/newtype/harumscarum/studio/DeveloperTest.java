@@ -2,10 +2,12 @@ package ch.newtype.harumscarum.studio;
 
 import java.util.Random;
 
-import org.junit.jupiter.api.Test;
-
 import ch.newtype.harumscarum.fundament.enums.GamePieceCategory;
+import org.junit.Test;
 
+/**
+ * @author Truemmelbach
+ */
 public class DeveloperTest {
 	
 	@Test

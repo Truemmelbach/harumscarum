@@ -2,6 +2,9 @@ package ch.newtype.harumscarum.fundament.enums;
 
 import ch.newtype.harumscarum.util.Randomizer;
 
+/**
+ * @author Truemmelbach
+ */
 public enum Gender {
 
 	MALE("männlich"), FEMALE("weiblich");

@@ -3,10 +3,15 @@ package ch.newtype.harumscarum.fundament.enums;
 import static org.junit.Assert.assertTrue;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 import org.junit.Test;
 
+/**
+ * @author Truemmelbach
+ */
 public class IntelligenceTest {
 	
 	/**
@@ -14,17 +19,11 @@ public class IntelligenceTest {
 	 */
 	@Test
 	public void testGetRandomIntelligence() {
-		Map<Intelligence, Integer> intelligenceMap = new HashMap<>();
+		Set<Intelligence> intelligenceSet = new HashSet<>();
 		for (int i = 0; i < 1000; i++) {
-			Intelligence currentIntelligence = Intelligence.getRandomIntelligence();
-			Integer value = intelligenceMap.get(currentIntelligence);
-			if (value == null) {
-				value = 0;
-			}
-			value++;
-			intelligenceMap.put(currentIntelligence, value);
+			intelligenceSet.add(Intelligence.getRandomIntelligence());
 		}
-		assertTrue(intelligenceMap.size() == Intelligence.values().length);
+		assertTrue(intelligenceSet.size() == Intelligence.values().length);
 	}
 
 }
