@@ -3,6 +3,9 @@ package ch.newtype.harumscarum.fundament;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * @author tr
+ */
 public class Game {
 	
 	private String name;
