@@ -6,7 +6,7 @@ package ch.newtype.harumscarum;
  */
 public class World {
 
-    private static long WAITING_TIME = 10000;
+    private static long DEFAULT_WAITING_TIME = 10000;
 
     private static boolean RUNNING = false;
 
@@ -27,19 +27,29 @@ public class World {
             @Override
             public void run() {
                 while (RUNNING) {
-                    tick();
+                    long waitingTime = DEFAULT_WAITING_TIME - tick();
+                    if (waitingTime < 0) {
+                        waitingTime = 0;
+                    }
                     try {
-                        Thread.sleep(WAITING_TIME);
+                        System.out.println("I'm going to wait " + waitingTime + " millis");
+                        Thread.sleep(waitingTime);
                     } catch (InterruptedException e) {
-
                     }
                 }
             }
         }.start();
     }
 
-    private void tick() {
-        System.out.println("tick");
+    private long tick() {
+        long start = System.currentTimeMillis();
+        System.out.println("tick start: " + start);
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return System.currentTimeMillis() - start;
     }
 
 }
